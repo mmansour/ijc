@@ -30,10 +30,12 @@
 {% endblock %}
 
 {% block main %}
-    {% if request.GET.sent %}
+{% if request.GET.sent %}
+    <div class='sent'>
     {% editable page.form.response %}
     {{ page.form.response|safe }}
     {% endeditable %}
+    </div>
 {% else %}
     {# editable page.form.content #}
     {{ page.form.content|safe }}
