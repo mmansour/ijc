@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags %}
+
+{% block meta_title %}{{ page.title }}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/about.css" type="text/css" />
+{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block extra_body %}
+    <div id="hero">
+        <img src="/site_media/images/headerabout.png" alt="About the people at IJC Digital" />
+        {% editable page.about.headertext %}
+            {{ page.about.headertext|richtext_filter|safe }}
+        {% endeditable %}
+    </div>
+{% endblock %}
+
+{% block middle_column %}
+    {% comment %}{% editable page.about.subheadertext %}
+       {{ page.about.subheadertext|richtext_filter|safe }}
+    {% endeditable %}{% endcomment %}
+    {% editable page.about.bodytext %}
+       {{ page.about.bodytext|richtext_filter|safe }}
+    {% endeditable %}
+{% endblock %}
+
+{% block main %}
+{% endblock %}

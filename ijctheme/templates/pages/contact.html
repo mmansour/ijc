@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags %}
+
+{% block meta_title %}{{ page.title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/contact.css" type="text/css" />
+{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block extra_body %}
+    <div id="hero">
+        <img src="/site_media/images/headercontact.png" alt="Contact IJC Digital with the form below." />
+    </div>
+{% endblock %}
+
+{% block main %}
+    {% if request.GET.sent %}
+    {% editable page.form.response %}
+    {{ page.form.response|safe }}
+    {% endeditable %}
+{% else %}
+    {# editable page.form.content #}
+    {{ page.form.content|safe }}
+    {# endeditable #}
+    <form method="post" class="form"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+        {% csrf_token %}
+        <ul>{{ form.as_ul }}</ul>
+        <input class="button" type="submit" value="{{ page.form.button_text }}" />
+    </form>
+{% endif %}
+{% endblock %}

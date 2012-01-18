@@ -1,0 +1,25 @@
+.container_12 {background:none; margin: 0; width: 960px;}
+
+/*.gutter {padding:0 30px;}*/
+#breadcrumb-menu{margin: 0 0 0 0;}
+#hero img{border: 0; margin: 34px 0 27px 0;}
+#hero h1{font-weight: normal; color: #444; font-size: 150%; margin-bottom: 27px;}
+
+#grid-left {width: 0; margin: 0; padding: 0; display:none;}
+
+#grid-middle {min-height:100%; width:700px; margin: -17px 0 0 0; padding: 0 27px 0 27px; float:right; border: solid 1px #DEDEDE;}
+#grid-middle h2 a{margin: 0 0 0 0; color:#000; font-family: Franklin Gothic Medium, "Helvetica Neue", helvetica, arial, sans-serif;
+    letter-spacing: 1px; font-weight:normal;}
+#grid-middle p{color:#666;}
+#grid-middle img {max-width:400px;}
+#grid-middle ul {list-style:disc;}
+#grid-middle ol {list-style:decimal;}
+#grid-middle blockquote {border-left: 1px solid #333; margin-left: 30px;}
+#grid-middle blockquote p {margin-left: 10px; line-height: 100%;}
+.gutter{margin: -54px 0 0 0; padding: 0;}
+
+#grid-right{margin: -13px 0 0 0; padding: 0; width:200px; float:left;}
+#grid-right h3, h4{font-family: Franklin Gothic Medium, "Helvetica Neue", helvetica, arial, sans-serif;
+    letter-spacing: 1px; font-weight:normal;}
+#grid-right a{color:#666;}
+#lowerhalf{display:none; height:0; width:0; margin: 0; padding: 0;}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags %}
+
+{% block meta_title %}{{ page.title }}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/home.css" type="text/css" />
+{% endblock %}
+
+{% block extra_body %}
+    <div id="hero">
+        {% editable page.homepage.headerone %}
+           {{ page.homepage.headerone|richtext_filter|safe }}
+        {% endeditable %}
+        <img src="/site_media/images/anim.gif" border="0" alt="Web Development - ECommerce - CMS" />
+        <br />
+        {% editable page.homepage.headertwo %}
+               {{ page.homepage.headertwo|richtext_filter|safe }}
+        {% endeditable %}
+    </div>
+{% endblock %}
+
+{% block left_column %}
+    {% editable page.homepage.coloneheader %}
+       {{ page.homepage.coloneheader|richtext_filter|safe }}
+    {% endeditable %}
+    <hr />
+    {% editable page.homepage.colonetext %}
+       {{ page.homepage.colonetext|richtext_filter|safe }}
+    {% endeditable %}
+{% endblock %}
+
+{% block middle_column %}
+    {% editable page.homepage.coltwoheader %}
+       {{ page.homepage.coltwoheader|richtext_filter|safe }}
+    {% endeditable %}
+    <hr />
+    {% editable page.homepage.coltwotext %}
+       {{ page.homepage.coltwotext|richtext_filter|safe }}
+    {% endeditable %}
+{% endblock %}
+
+{% block right_column %}
+    {% editable page.homepage.colthreeheader %}
+       {{ page.homepage.colthreeheader|richtext_filter|safe }}
+    {% endeditable %}
+    <hr />
+    <ul>
+    {% for b in bp %}
+        <li><a href="{% url blog_post_detail b.slug %}">{{ b.title }}</a></li>
+    {% endfor %}
+    </ul>
+    {% editable page.homepage.colthreetext %}
+       {{ page.homepage.colthreetext|richtext_filter|safe }}
+    {% endeditable %}
+{% endblock %}
+
+{% comment %}{% block lower_left_column %}
+    {% if "mezzanine.twitter"|is_installed %}
+    {% include "twitter/tweets.html" %}
+    {% endif %}
+{% endblock %}
+
+{% block lower_right_column %}
+    <h2>FROM THE BLOG</h2>
+    <hr />
+{% endblock %}{% endcomment %}
+
+{% block main %}{% endblock %}

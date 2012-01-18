@@ -1,0 +1,48 @@
+#hero{width:960px; height: 265px; background-image:url("/site_media/images/bghero.png");
+    background-repeat:no-repeat;}
+#hero h1{width:517px; border: 0; padding: 73px 0 0 27px; float:left; color:#666;}
+#hero h2{font-size: 110%; width:517px; border: 0; padding: 133px 0 0 27px; color:#333;}
+#hero img{float:right; margin: 35px 104px 0 0; height:164px;}
+.container_12 {background:none; margin: 0; width: 960px;}
+
+p{color:#666;}
+
+/*.gutter {padding:0 30px;}*/
+
+#grid-left { height: 387px; width: 295px; margin: 0; padding: 0 25px 0 0;}
+#grid-left h2 {margin: 32px 0 0 0;}
+/*#grid-left li {display:block; margin:5px 30px; line-height:100%;}*/
+#grid-left ul ul li {list-style-type:disc; font-size:80%;}
+
+#grid-middle {height: 387px; width:295px; margin: 0; padding: 0 25px 0 0;}
+#grid-middle h2 {margin: 32px 0 0 0;}
+#grid-middle img {max-width:400px;}
+#grid-middle ul {padding: 0 0 0 0;}
+#grid-middle li {color:#666; display:block; margin:5px 30px 0 0; padding: 0 0 0 14px; line-height:137%;
+    background-image:url("/site_media/images/listarrow.png");
+    background-repeat:no-repeat;
+    background-position: 0 0;}
+#grid-middle ol {list-style:decimal;}
+#grid-middle blockquote {border-left: 1px solid #333; margin-left: 30px;}
+#grid-middle blockquote p {margin-left: 10px; line-height: 100%;}
+
+#grid-right{height: 387px; width:320px; margin: 0; padding: 0 0 0 0;}
+#grid-right h2 {margin: 32px 0 0 0;}
+/*#grid-right li {display:block; margin-top:3px;}*/
+#grid-right ul {padding: 0 0 0 0;}
+#grid-right li {color:#666; display:block; margin:5px 30px 0 0; padding: 0 0 0 14px; line-height:137%;
+    background-image:url("/site_media/images/listarrow.png");
+    background-repeat:no-repeat;
+    background-position: 0 0;}
+#grid-right blockquote em{margin: 0 0 0 0; padding: 0 0 0 5px; color:#666;}
+#grid-right blockquote span{font-size: 2.5em; float:left; font-family: "Trebuchet MS", Arial, serif ;}
+
+.homemiddlelinks{position: absolute; bottom: 50px; color: #000;
+    font-weight: bold; font-size: 13px; letter-spacing: 1px;
+    width:295px; padding-left:0; margin-bottom: 71px; text-align: right; border-top:1px solid #FF0000;}
+
+.gutter {display: none; margin: 0; padding: 0;}
+
+#lowerhalf{width: 960px; height: 195px; clear:both; margin: 37px 0 0 0;}
+#lowerhalf-grid-left { float: left; width: 295px; height:195px; margin: 0; padding: 0 25px 0 0;}
+#lowerhalf-grid-right { float:right; width: 295px; height:195px;  margin: 0; padding: 0 25px 0 0;}
