@@ -18,9 +18,9 @@
 .gutter h1{font-weight: normal; color: #444; font-size: 150%; margin-bottom: 27px;}
 .gutter p {float: right; width:450px; margin-top: 0;}
 
-.form {width:455px; margin: 0 0 27px 0;background: -moz-linear-gradient(top,  #EEE,  #DDD);
-    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#DDD));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFDDDDDD');}
+.form {width:455px; margin: 0 0 27px 0;background: -moz-linear-gradient(top,  #EEE,  #FFF);
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF');}
 
 .form li {display:block; padding:5px 10px;}
 .form li ul, .form li li {display:inline;}
