@@ -39,10 +39,12 @@ p{color:#666;}
 
 .homemiddlelinks{position: absolute; bottom: 50px; color: #000;
     font-weight: bold; font-size: 13px; letter-spacing: 1px;
-    width:295px; padding-left:0; margin-bottom: 71px; text-align: right; border-top:1px solid #FF0000;}
+    width:295px; padding-left:0; margin-bottom: 77px; text-align: right; border-top:1px solid #FF0000;}
 
 .gutter {display: none; margin: 0; padding: 0;}
 
-#lowerhalf{width: 960px; height: 195px; clear:both; margin: 37px 0 0 0;}
-#lowerhalf-grid-left { float: left; width: 295px; height:195px; margin: 0; padding: 0 25px 0 0;}
-#lowerhalf-grid-right { float:right; width: 295px; height:195px;  margin: 0; padding: 0 25px 0 0;}
+#lowerhalf{width: 960px; clear:both; margin-bottom:-14px; overflow: hidden;
+position: relative;}
+#tweetimage{float:left; position: relative;}
+#tweettext{float:left; position:relative; 
+    margin: -13px 0 -23px 0; padding:0 7px 0 7px;}

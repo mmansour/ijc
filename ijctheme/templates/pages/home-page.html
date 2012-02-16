@@ -83,3 +83,14 @@
 {% endblock %}{% endcomment %}
 
 {% block main %}{% endblock %}
+
+{% block lower_half %}
+<div id="lowerhalf">
+    <div id="tweetimage"><img src="/site_media/images/twitterbird.png" alt="It's Just Coffee Tweets"/></div>
+    <div id="tweettext">
+    {% if "mezzanine.twitter"|is_installed %}
+    {% include "twitter/tweets.html" %}
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
