@@ -4,22 +4,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
-    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" /> 
-    <meta name="description" content="{% block meta_description %}{% endblock %}" /> 
-    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+<meta name="description" content="{% block meta_description %}{% endblock %}" />
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 
-    {% if "mezzanine.blog"|is_installed %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" 
-        href="{% url blog_post_feed "rss" %}" />
-    <link rel="alternate" type="application/atom+xml" title="Atom"  
-        href="{% url blog_post_feed "atom" %}" />
-    {% endif %}
+{% if "mezzanine.blog"|is_installed %}
+<link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{% url blog_post_feed "rss" %}" />
+<link rel="alternate" type="application/atom+xml" title="Atom"
+    href="{% url blog_post_feed "atom" %}" />
+{% endif %}
 
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/960.css" type="text/css" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/global.css" type="text/css" />
-    {% block extra_head %}{% endblock %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/960.css" type="text/css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css" />
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/global.css" type="text/css" />
+{% block extra_head %}{% endblock %}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+//    loadPlayer();
+$('.tweets > li').click(function(event){
+    $(this).find('a').attr('target','_blank');
+});
+});
+</script>
 
 </head>
 <body>
