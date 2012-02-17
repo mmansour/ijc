@@ -60,7 +60,7 @@
 {% editable page.homepage.colthreeheader %}
 {{ page.homepage.colthreeheader|richtext_filter|safe }}
 {% endeditable %}
-<hr />
+<hr />test
 <ul>
 {% for b in bp %}g
 <li><a href="{% url blog_post_detail b.slug %}">{{ b.title }}</a></li>
