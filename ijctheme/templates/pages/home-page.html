@@ -57,18 +57,18 @@
 {% endblock %}
 
 {% block right_column %}
-    {% editable page.homepage.colthreeheader %}
-       {{ page.homepage.colthreeheader|richtext_filter|safe }}
-    {% endeditable %}
-    <hr />
-    <ul>
-    {% for b in bp %}
-        <li><a href="{% url blog_post_detail b.slug %}">{{ b.title }}</a></li>
-    {% endfor %}
-    </ul>
-    {% editable page.homepage.colthreetext %}
-       {{ page.homepage.colthreetext|richtext_filter|safe }}
-    {% endeditable %}
+{% editable page.homepage.colthreeheader %}
+{{ page.homepage.colthreeheader|richtext_filter|safe }}
+{% endeditable %}
+<hr />
+<ul>
+{% for b in bp %}
+<li><a href="{% url blog_post_detail b.slug %}">{{ b.title }}</a></li>
+{% endfor %}
+</ul>
+{% editable page.homepage.colthreetext %}
+{{ page.homepage.colthreetext|richtext_filter|safe }}
+{% endeditable %}
 {% endblock %}
 
 {% comment %}{% block lower_left_column %}
